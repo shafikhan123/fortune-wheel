@@ -247,24 +247,27 @@
                 
                     container.on("click", spin);
                     //play();
-                    d3.select("#label h1")
-                        .text(data[picked].label);
-                       var a= document.getElementById("label").textContent;
-                        console.log(a);
-                      if (a == "LOL"){
-                        play1();
-                      }
-                      if (a == "Key Chain" || a == "Magnet" ||a == "Sticker"){
-                        play2();
-                        
-                      }
-                      
-                       if (a == "Mug" ||a == "T-Shirt" ||a == "USB"){
-                        document.getElementById("canvas").style.display = "block";
-                        play3();
-                      }
-                    
+                                       
                 });
+				d3.select("#label h1")
+                        .text(data[picked].label);
+                        a= document.getElementById("label").textContent;
+                             console.log(a)           
+                      if (a == "LOL"){                          
+                         play1();
+                          }
+                          else if (a == "Key Chain" || a == "Magnet" ||a == "Sticker") {
+                         play2(); 
+                          document.getElementById("audio2").play();
+                        }
+                       else if (a == "Mug" ||a == "T-Shirt" ||a == "USB"){
+                       play3();
+                          document.getElementById("canvas").style.display = "block";
+                      
+                      }
+                      else {
+                       
+                      }
                 
         }
         //make arrow
